@@ -1,0 +1,1156 @@
+/* =========================
+ULTRA MODERN FURNITURE FONT SYSTEM 2026
+Luxury • Creative • Unique
+========================= */
+
+/* IMPORT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Sans+Thai:wght@300;400;500&display=swap');
+
+
+/* =========================
+BODY TEXT
+========================= */
+
+body{
+
+  font-family:
+  'IBM Plex Sans Thai',
+  sans-serif;
+
+  font-weight:400;
+
+  font-size:16px;
+
+  letter-spacing:.2px;
+
+  color:#1f2937;
+
+}
+
+
+/* =========================
+MAIN TITLE
+========================= */
+
+h1{
+
+  font-family:
+  'Cormorant Garamond',
+  'IBM Plex Sans Thai',
+  serif;
+
+  font-weight:600;
+
+  letter-spacing:1.8px;
+
+}
+
+
+/* =========================
+SUB TITLE
+========================= */
+
+h2,
+h3,
+.section-title{
+
+  font-family:
+  'Cormorant Garamond',
+  'IBM Plex Sans Thai',
+  serif;
+
+  font-weight:500;
+
+  letter-spacing:1px;
+
+}
+
+
+
+
+.btn,
+.hero-btn{
+
+  font-family:
+  'Space Grotesk',
+  'IBM Plex Sans Thai',
+  sans-serif;
+
+  font-weight:500;
+
+  letter-spacing:.5px;
+
+}
+
+
+/* =========================
+PRICE
+========================= */
+
+.price{
+
+  font-family:
+  'Space Grotesk',
+  sans-serif;
+
+  font-weight:600;
+
+  font-size:20px;
+
+  letter-spacing:1px;
+
+}
+
+
+/* =========================
+PARAGRAPH
+========================= */
+
+p{
+
+  font-family:
+  'IBM Plex Sans Thai',
+  sans-serif;
+
+  font-weight:400;
+
+  color:#6b7280;
+
+}
+
+
+:root{
+  --wood-dark:#2c1f1a;
+  --wood-main:#8b5a2b;
+  --wood-light:#f8f7f7;
+  --bg-light:#f9f7f4;
+  --text-dark:#1f2937;
+  --text-gray:#6b7280;
+
+  --shadow-lg:0 10px 30px rgba(0,0,0,.25);
+  --shadow-soft:0 6px 18px rgba(0,0,0,.15);
+}
+
+/* ===== Reset ===== */
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+/* ===== Page Layout ===== */
+html,body{
+  height:100%;
+}
+
+body{
+  
+  background:
+    linear-gradient(180deg,#faf8f5,var(--bg-light));
+  color:var(--text-dark);
+  line-height:1.7;
+  overflow-x:hidden;
+
+  display:flex;
+  flex-direction:column;
+}
+
+/* ===== Navbar ===== */
+nav{
+  background:
+    linear-gradient(
+      to right,
+      rgba(44,31,26,.98),
+      rgba(60,40,32,.95)
+    );
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0.8rem 2.5rem;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:var(--shadow-lg);
+  backdrop-filter:blur(6px);
+}
+
+nav .logo img{
+  height:55px;
+  transition:transform .3s ease;
+}
+
+nav .logo img:hover{
+  transform:scale(1.05);
+}
+
+nav .menu{
+  display:flex;
+  align-items:center;
+}
+
+
+
+nav .menu a:hover{
+  color:#f5d9b5;
+}
+
+nav .menu a::after{
+  content:"";
+  position:absolute;
+  width:0%;
+  height:2px;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  background:linear-gradient(
+    to right,
+    transparent,
+    #f5d9b5,
+    transparent
+  );
+  transition:width .3s ease;
+}
+
+nav .menu a:hover::after,
+nav .menu a.active::after{
+  width:100%;
+}
+
+/* ===== Footer ===== */
+footer{
+  margin-top:auto;
+  background:
+    linear-gradient(
+      to right,
+      rgba(44,31,26,.98),
+      rgba(60,40,32,.95)
+    );
+  color:#fff;
+  padding:50px 20px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 -6px 20px rgba(0,0,0,.25);
+}
+
+footer::before{
+  content:"";
+  position:absolute;
+  inset:-50%;
+  background:
+    radial-gradient(circle,
+      rgba(255,255,255,0.12) 15%,
+      transparent 55%);
+  animation:rotateGlow 18s linear infinite;
+  pointer-events:none;
+}
+
+footer p{
+  font-size:.95rem;
+  letter-spacing:.4px;
+  color:#f3f3f3;
+}
+
+footer *{
+  position:relative;
+  z-index:1;
+}
+
+/* ===== Animation ===== */
+@keyframes rotateGlow{
+  from{transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
+}
+
+nav img{height:55px;border-radius:6px;}
+.menu a{
+  color:#fff;
+  margin:0 18px;
+  text-decoration:none;
+  font-weight:600;
+  position:relative;
+}
+.menu a::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:-6px;
+  width:0;
+  height:2px;
+  background:#f5d9b5;
+  transform:translateX(-50%);
+  transition:.3s;
+}
+.menu a:hover::after,.menu a.active::after{width:100%;}
+
+/* Hero */
+.hero{
+  height:80vh;
+  background:url("img/c2.jpg") center/cover no-repeat;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.55);
+}
+.hero-content{
+  position:relative;
+  color:#fff;
+  text-align:center;
+}
+
+.hero p{margin:12px 0 20px;}
+.hero-btn{
+  padding:14px 40px;
+  background:var(--wood-main);
+  border-radius:40px;
+  color:#fff;
+  text-decoration:none;
+}
+
+/* Contact Icons */
+.contact-icons{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin:50px 0;
+}
+.contact-icons a{text-decoration:none;}
+.icon{
+  width:55px;height:55px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+}
+
+.phone{background:#4caf50}
+.line{background:#00c300}
+.facebook{background:#1877f2}
+
+/* Sections */
+.section-title{text-align:center;font-size:32px;margin-bottom:40px;}
+.intro-text{max-width:800px;margin:0 auto 80px;text-align:center;}
+
+.why-us{padding:80px 10%;background:#f2f2f2;}
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+.why-card{
+  background:#fff;
+  padding:30px;
+  border-radius:14px;
+  text-align:center;
+  box-shadow:var(--shadow-soft);
+}
+
+/* Products */
+.product-grid{
+  max-width:1100px;
+  margin:0 auto 100px;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+.product-card{
+  background:#fff;
+  border-radius:22px;
+  overflow:hidden;
+  text-align:center;
+  box-shadow:var(--shadow-soft);
+}
+.product-card{
+  transition:transform .35s ease, box-shadow .35s ease;
+}
+
+.product-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 18px 40px rgba(0,0,0,.25);
+}
+.product-card img{
+  width:100%;
+  height:220px;
+  object-fit:contain;
+  background:#f3f3f3;
+  padding:12px;
+  transition:transform .4s ease;
+}
+
+.product-card:hover img{
+  transform:scale(1.08);
+}
+.price{color:var(--wood-main);font-weight:600;}
+.btn{
+  display:inline-block;
+  margin:14px 0 26px;
+  padding:10px 26px;
+  background:var(--wood-dark);
+  color:#fff;
+  border-radius:30px;
+  text-decoration:none;
+}
+/* ===== Login Icon ===== */
+.login-icon{
+  width:42px;
+  height:42px;
+  margin-left:18px;
+
+  background:linear-gradient(145deg,#8b5a2b,#6e4622);
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  color:#fff;
+  font-size:16px;
+
+  box-shadow:0 4px 12px rgba(0,0,0,.35);
+  transition:all .3s ease;
+}
+
+.login-icon:hover{
+  transform:translateY(-3px) scale(1.08);
+  box-shadow:0 8px 18px rgba(0,0,0,.45);
+  background:linear-gradient(145deg,#a66b35,#7a4d25);
+}
+
+.login-icon i{
+  pointer-events:none;
+}
+
+
+.hero-sub{
+
+  color:#ffffff;
+
+  font-weight:500;
+
+  letter-spacing:.5px;
+
+}
+
+/* =========================
+INTRO LUXURY REVEAL ตั้งแต่นี้
+========================= */
+
+.intro-text{
+
+opacity:0;
+
+transform: translateY(60px);
+
+animation: introReveal 1.6s ease forwards;
+
+animation-delay: .3s;
+
+}
+
+
+/* Title */
+
+.intro-text h2{
+
+opacity:0;
+
+transform: translateY(40px);
+
+animation: introReveal 1.6s ease forwards;
+
+animation-delay: .6s;
+
+}
+
+
+/* Paragraph */
+
+.intro-text p{
+
+opacity:0;
+
+transform: translateY(40px);
+
+animation: introReveal 1.6s ease forwards;
+
+animation-delay: .9s;
+
+}
+
+
+/* Animation */
+
+@keyframes introReveal{
+
+to{
+
+opacity:1;
+
+transform: translateY(0);
+
+}
+
+}
+
+.hero-content{
+  opacity:0;
+  transform:translateY(50px);
+  animation: heroFadeUp 1.5s ease forwards;
+}
+
+/* animation */
+@keyframes heroFadeUp{
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+/* ===== Contact Icons Container ===== */
+
+.contact-icons{
+
+  position:fixed;
+  right:20px;
+  bottom:30px;
+
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+
+  z-index:999;
+
+}
+
+
+/* ===== Icon Style ===== */
+
+.contact-icons .icon{
+
+  width:55px;
+  height:55px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  font-size:22px;
+
+  color:white;
+
+  text-decoration:none;
+
+  box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+  backdrop-filter:blur(10px);
+
+  transition:.4s;
+
+  opacity:0;
+  transform:translateX(50px);
+
+  animation:slideIn .6s forwards;
+
+}
+
+
+/* delay ทีละอัน */
+
+.contact-icons .phone{
+
+  background:#694F3C;
+  animation-delay:.2s;
+
+}
+
+.contact-icons .line{
+
+  background:#06C755;
+  animation-delay:.4s;
+
+}
+
+.contact-icons .facebook{
+
+  background:#1877F2;
+  animation-delay:.6s;
+
+}
+
+
+
+/* hover effect */
+
+.contact-icons .icon:hover{
+
+  transform:scale(1.2) rotate(8deg);
+
+  box-shadow:0 15px 35px rgba(0,0,0,.5);
+
+}
+
+
+
+/* slide animation */
+
+@keyframes slideIn{
+
+  to{
+
+    opacity:1;
+    transform:translateX(0);
+
+  }
+
+}
+
+.contact-icons .icon:hover{
+
+  transform:scale(1.2) rotate(8deg);
+  box-shadow:0 0 20px rgba(0,0,0,.5);
+
+}
+
+
+
+/* ก่อนแสดง */
+
+.animate{
+
+  opacity:0;
+  transform:translateY(60px);
+  transition:1s;
+
+}
+
+
+/* ตอนแสดง */
+
+.animate.show{
+
+  opacity:1;
+  transform:translateY(0);
+
+}
+.why-card{
+
+  transition:1s cubic-bezier(.22,1,.36,1);
+
+}
+
+/* ===== Scroll Animation ===== */
+
+.animate{
+
+  opacity:0;
+  transform:translateY(80px);
+  transition:1s cubic-bezier(.22,1,.36,1);
+
+}
+
+.animate.show{
+
+  opacity:1;
+  transform:translateY(0);
+
+}
+
+/* ===== Product Card ===== */
+
+.product-card{
+
+  background:white;
+
+  border-radius:15px;
+
+  overflow:hidden;
+
+  box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+  transition:.4s;
+
+}
+
+
+/* hover */
+
+.product-card:hover{
+
+  transform:translateY(-15px);
+
+  box-shadow:0 25px 50px rgba(0,0,0,.25);
+
+}
+
+
+/* image zoom */
+
+.product-card img{
+
+  width:100%;
+
+  transition:.5s;
+
+}
+
+.product-card:hover img{
+
+  transform:scale(1.1);
+
+}
+
+/* =========================
+HERO BUTTON LUXURY EFFECT
+ใส่ต่อท้ายไฟล์ CSS
+========================= */
+
+.hero-btn{
+
+  display:inline-block;
+  margin-top:25px;
+
+  padding:15px 42px;
+
+  font-size:17px;
+  font-weight:600;
+  letter-spacing:.8px;
+
+  color:#fff;
+  text-decoration:none;
+
+  background:
+  linear-gradient(
+    135deg,
+    #8b5a2b,
+    #5a3a22
+  );
+
+  border-radius:50px;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.35),
+  inset 0 1px 0 rgba(255,255,255,.2);
+
+  position:relative;
+  overflow:hidden;
+
+  transition:.35s cubic-bezier(.22,1,.36,1);
+
+  animation:heroBtnFloat 3.5s ease-in-out infinite;
+
+}
+
+
+/* ===== ลอยขึ้นลง ===== */
+
+@keyframes heroBtnFloat{
+
+  0%,100%{
+
+    transform:translateY(0);
+
+  }
+
+  50%{
+
+    transform:translateY(-10px);
+
+  }
+
+}
+
+
+
+/* ===== hover ===== */
+
+.hero-btn:hover{
+
+  transform:translateY(-14px) scale(1.05);
+
+  box-shadow:
+
+  0 25px 55px rgba(0,0,0,.55),
+
+  0 0 25px rgba(139,90,43,.6);
+
+}
+
+
+
+/* ===== ตอนกด ===== */
+
+.hero-btn:active{
+
+  transform:translateY(-3px) scale(.96);
+
+  box-shadow:
+
+  0 8px 20px rgba(0,0,0,.4);
+
+}
+
+
+
+/* ===== แสงวิ่ง ===== */
+
+.hero-btn::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:-100%;
+
+  width:100%;
+  height:100%;
+
+  background:
+
+  linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.45),
+    transparent
+  );
+
+  transition:.7s;
+
+}
+
+.hero-btn:hover::before{
+
+  left:100%;
+
+}
+
+
+
+/* ===== glow ตอน hover ===== */
+
+.hero-btn::after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  border-radius:50px;
+
+  opacity:0;
+
+  box-shadow:
+
+  0 0 30px rgba(139,90,43,.6);
+
+  transition:.4s;
+
+}
+
+.hero-btn:hover::after{
+
+  opacity:1;
+
+}
+
+/* =========================
+MOBILE NAVBAR FIX
+========================= */
+
+@media (max-width:768px){
+
+  nav{
+
+    padding:12px 16px;
+
+    flex-wrap:wrap;
+
+  }
+
+  nav .logo img{
+
+    height:42px;
+
+  }
+
+  nav .menu{
+
+    width:100%;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    margin-top:10px;
+
+  }
+
+
+
+}
+
+
+/* =========================
+LUXURY FURNITURE FONT SYSTEM 2026
+Premium • Modern • Thai Support
+========================= */
+
+/* IMPORT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Noto+Sans+Thai:wght@300;400;500;600&display=swap');
+
+
+/* =========================
+BODY TEXT
+========================= */
+
+body{
+
+  font-family:
+  'Plus Jakarta Sans',
+  'Noto Sans Thai',
+  sans-serif;
+
+  font-weight:400;
+
+  font-size:16px;
+
+  letter-spacing:.3px;
+
+  color:#1f2937;
+
+}
+
+
+/* =========================
+MAIN TITLE
+========================= */
+
+h1{
+
+  font-family:
+  'Playfair Display',
+  'Noto Sans Thai',
+  serif;
+
+  font-weight:700;
+
+  letter-spacing:1.2px;
+
+}
+
+
+/* =========================
+SUB TITLE
+========================= */
+
+h2,
+h3,
+.section-title{
+
+  font-family:
+  'Playfair Display',
+  'Noto Sans Thai',
+  serif;
+
+  font-weight:600;
+
+  letter-spacing:.6px;
+
+}
+
+.btn,
+.hero-btn{
+
+  font-family:
+  'Plus Jakarta Sans',
+  'Noto Sans Thai',
+  sans-serif;
+
+  font-weight:500;
+
+}
+
+
+/* =========================
+PRICE
+========================= */
+
+.price{
+
+  font-family:
+  'Plus Jakarta Sans',
+  sans-serif;
+
+  font-weight:600;
+
+  font-size:20px;
+
+  letter-spacing:.5px;
+
+}
+
+
+/* =========================
+PARAGRAPH
+========================= */
+
+p{
+
+  font-family:
+  'Plus Jakarta Sans',
+  'Noto Sans Thai',
+  sans-serif;
+
+  font-weight:400;
+
+  color:#6b7280;
+
+}
+
+
+/* IMPORT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Sans+Thai:wght@300;400;500&display=swap');
+
+
+/* =========================
+BODY TEXT
+========================= */
+
+body{
+
+  font-family:
+  'IBM Plex Sans Thai',
+  sans-serif;
+
+  font-weight:400;
+
+  font-size:16px;
+
+  letter-spacing:.2px;
+
+  color:#1f2937;
+
+}
+
+
+/* =========================
+MAIN TITLE
+========================= */
+
+h1{
+
+  font-family:
+  'Cormorant Garamond',
+  'IBM Plex Sans Thai',
+  serif;
+
+  font-weight:600;
+
+  letter-spacing:1.8px;
+
+}
+
+
+/* =========================
+SUB TITLE
+========================= */
+
+h2,
+h3,
+.section-title{
+
+  font-family:
+  'Cormorant Garamond',
+  'IBM Plex Sans Thai',
+  serif;
+
+  font-weight:500;
+
+  letter-spacing:1px;
+
+}
+
+
+/* =========================
+MENU
+========================= */
+
+.menu a{
+
+  font-family:
+  'Space Grotesk',
+  'IBM Plex Sans Thai',
+  sans-serif;
+
+  font-weight:500;
+
+  letter-spacing:.8px;
+
+}
+
+
+/* =========================
+BUTTON
+========================= */
+
+.btn,
+.hero-btn{
+
+  font-family:
+  'Space Grotesk',
+  'IBM Plex Sans Thai',
+  sans-serif;
+
+  font-weight:500;
+
+  letter-spacing:.5px;
+
+}
+
+
+/* =========================
+PRICE
+========================= */
+
+.price{
+
+  font-family:
+  'Space Grotesk',
+  sans-serif;
+
+  font-weight:600;
+
+  font-size:20px;
+
+  letter-spacing:1px;
+
+}
+
+
+/* =========================
+PARAGRAPH
+========================= */
+
+p{
+
+  font-family:
+  'IBM Plex Sans Thai',
+  sans-serif;
+
+  font-weight:400;
+
+  color:#6b7280;
+
+}

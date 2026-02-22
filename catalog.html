@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>แคตตาล็อกเฟอร์นิเจอร์</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="catalog.css" />
+</head>
+<body>
+
+<!-- ===== Navbar ===== -->
+<nav>
+  <a href="index.html" class="logo">
+    <img src="img/logo.jpg" alt="ร้านลุงเริน">
+  </a>
+
+  <div class="menu">
+    <a href="index.html" >หน้าแรก</a>
+    <a href="product.html">สินค้า</a>
+    <a href="catalog.html" class="active">แคตตาล็อก</a>
+    <a href="about.html">เกี่ยวกับเรา</a>
+    <a href="contact.html">ติดต่อเรา</a>
+    <a href="ai.html">AI</a>
+</a>
+
+  </div>
+</nav>
+
+<section class="catalog-section">
+  <h1 class="catalog-title">แคตตาล็อกเฟอร์นิเจอร์</h1>
+  <p class="catalog-subtitle">
+    รวมผลงานเฟอร์นิเจอร์ไม้พาเลท งานคุณภาพจากร้านลุงเริน
+  </p>
+
+  <div class="catalog-grid">
+
+    <!-- เล่มที่ 1 -->
+    <div class="catalog-book">
+      <div class="book-cover">
+        <img src="img/1.png" alt="Catalog 01">
+      </div>
+      <h3>Catalog Vol.01</h3>
+      <p>โต๊ะ & เก้าอี้ไม้พาเลท</p>
+      <div class="book-buttons">
+        <a href="https://online.fliphtml5.com/fftno/jcwc/" target="_blank" class="btn view">
+          <i class="fas fa-book-open"></i> catalog
+        </a>
+        <a href="t/Addp.pdf" download class="btn download">
+          <i class="fas fa-download"></i> ดาวน์โหลด
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<footer>© 2025 ลุงเรินเฟอร์นิเจอร์</footer>
+<script>
+
+/* ===== PREMIUM SCROLL REVEAL ===== */
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},{threshold:.2});
+
+
+document.querySelectorAll(
+
+'.catalog-title, .catalog-subtitle, .catalog-book'
+
+).forEach((el)=>{
+
+observer.observe(el);
+
+});
+
+</script>
+</body>
+</html>

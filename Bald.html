@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>เก้าอี้ไม้พาเลท | ร้านลุงเริน</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="g1.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+  <script type="module"
+src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+</script>
+<body>
+
+<!-- ===== Navbar ===== -->
+<nav>
+  <a href="index.html" class="logo">
+    <img src="img/logo.jpg" alt="โลโก้">
+  </a>
+  <div class="menu">
+    <a href="index.html">หน้าแรก</a>
+    <a href="product.html" class="active">สินค้า</a>
+    <a href="catalog.html">แคตตาล็อก</a>
+    <a href="about.html">เกี่ยวกับเรา</a>
+    <a href="contact.html">ติดต่อเรา</a>
+    <a href="ai.html">AI</a>
+  </div>
+</nav>
+
+<!-- ===== Product Page ===== -->
+<main class="product-page">
+
+  <!-- ===== Gallery ===== -->
+  <section class="product-gallery">
+    <div class="gallery-wrapper">
+
+      <div class="slider">
+        <button class="nav prev" onclick="prevSlide()">❮</button>
+
+        <img src="img/l1.jpg" class="slide active">
+        <img src="img/l2.jpg" class="slide">
+        <img src="img/l3.jpg" class="slide">
+        <img src="img/l4.jpg" class="slide">
+
+        <button class="nav next" onclick="nextSlide()">❯</button>
+          <a href="javascript:void(0)" class="btn-3d" onclick="open3D()">
+  <i class="fa-solid fa-cube"></i>
+  ดูสินค้า 3D
+</a>
+      </div>
+   
+      <div class="thumbs">
+        <img src="img/l1.jpg" onclick="goSlide(0)">
+        <img src="img/l2.jpg" onclick="goSlide(1)">
+        <img src="img/l3.jpg" onclick="goSlide(2)">
+        <img src="img/l4.jpg" onclick="goSlide(3)">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== Detail ===== -->
+  <section class="product-detail">
+    <h1>เก้าอี้หัวโล้น</h1>
+    <p class="price">ราคา <span>150 บาท</span></p>
+
+    <p class="desc">
+      เก้าอี้หัวโล้น งานทำมือ แข็งแรง  
+      เหมาะสำหรับบ้าน ร้านกาแฟ และสวน
+    </p>
+
+    <ul class="spec">
+      <li>วัสดุ : ไม้สนนอก</li>
+      <li>ขนาด : กว้าง*ลึก*สูง</li>
+      <li>ขนาด : 30*30*45 เซนติเมตร</li>
+      <li>มี 2 สี : ธรรมชาติ / ไม้โอ๊ค</li>
+      <li>งานแฮนด์เมด</li>
+    </ul>
+
+    <div class="btn-group">
+      <a href="https://www.facebook.com/share/1C6vxHSXoo/?mibextid=wwXIfr" target="_blank" class="btn fb">
+        <i class="fa-brands fa-facebook-f"></i>
+        สั่งซื้อผ่าน Facebook
+      </a>
+
+      <a href="tel:095-714-3408" class="btn call">
+        <i class="fa-solid fa-phone"></i>
+        โทรสั่งซื้อ
+      </a>
+                  <a href="javascript:void(0)" class="btn ar" onclick="openAR()">
+  <i class="fa-solid fa-cube"></i>
+  ดูสินค้า AR
+</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== Related Products ===== -->
+<section class="related-section">
+  <h2>สินค้าแนะนำอื่น ๆ</h2>
+  <p class="sub">เฟอร์นิเจอร์ไม้จากร้านลุงเริน</p>
+
+  <div class="related-grid">
+    <a href="g1.html" class="related-card">
+      <img src="img/g4.jpg">
+      <div class="info">
+        <h4>เก้าอี้ไม้ </h4>
+        <span>฿250</span>
+      </div>
+    </a>
+
+    <a href="t4.html" class="related-card">
+      <img src="img/t1.jpg">
+      <div class="info">
+        <h4>โต๊ะกาแฟ</h4>
+        <span>฿500</span>
+      </div>
+    </a>
+
+      <a href="p.html" class="related-card">
+      <img src="img/p1.jpg">
+      <div class="info">
+        <h4>เก้าอี้พนักพิง</h4>
+        <span>฿890</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ===== 3D MODAL (ไม่เปลี่ยนหน้า) ===== -->
+<div id="modelModal" class="model-modal">
+  <span class="close" onclick="close3D()">✕</span>
+
+ <model-viewer
+  src="model/เก้าอี้หัวโล้น.glb"
+  alt="เก้าอี้ไม้พาเลท"
+  camera-controls
+  auto-rotate
+  ar
+  ar-modes="webxr scene-viewer quick-look"
+  shadow-intensity="1"
+  exposure="1">
+
+  <!-- ความสูง -->
+<div class="hotspot measure height"
+     slot="hotspot-height"
+     data-position="0 1.9 0"
+     data-normal="0 1 0">
+  <span class="label">สูง 45 ซม.</span>
+</div>
+
+<!-- ความลึก-->
+<div class="hotspot measure width"
+     slot="hotspot-width"
+     data-position="0.8 0.4 0"
+     data-normal="1 0 0">
+  <span class="label">ลึก 30 ซม.</span>
+</div>
+
+<!-- ความลึก -->
+<div class="hotspot measure depth"
+     slot="hotspot-depth"
+     data-position="0 0.4 0.5"
+     data-normal="0 0 1">
+  <span class="label">กว้าง 30 ซม.</span>
+</div>
+
+</model-viewer>
+
+</div>
+<!-- ===== AR MODAL ===== -->
+<div id="arModal" class="ar-modal">
+  <span class="close" onclick="closeAR()">✕</span>
+
+  <div class="ar-box">
+    <h2>ดูสินค้าแบบ AR</h2>
+
+    <div class="ar-content">
+      <!-- รูป QR -->
+      <div class="ar-item">
+        <img src="img/โล้นqr.jpg" alt="QR Code AR">
+        <p><strong>สแกน QR</strong><br>เพื่อเข้าเว็บ AR</p>
+      </div>
+
+      <!-- รูปสินค้า -->
+      <div class="ar-item">
+        <img src="img/โล้น.jpg" alt="ตัวอย่างสินค้า">
+        <p><strong>สแกนรูปสินค้า</strong><br>เพื่อดูสินค้าแบบ AR</p>
+      </div>
+    </div>
+
+    <div class="ar-howto">
+      <h4>วิธีใช้งาน</h4>
+      <ol>
+        <li>เปิดกล้องมือถือแล้วสแกน QR Code</li>
+        <li>เข้าเว็บไซต์ Web AR</li>
+        <li>กดที่ Start AR</li>
+        <li>ยกมือถือส่องไปที่รูปสินค้าในแคตตาล็อก</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+
+
+</section>
+<footer>
+  © 2025 ลุงเรินเฟอร์นิเจอร์
+</footer>
+
+<script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+function showSlide(i){
+  slides.forEach(s => s.classList.remove("active"));
+  slides[i].classList.add("active");
+}
+function nextSlide(){
+  index = (index + 1) % slides.length;
+  showSlide(index);
+}
+function prevSlide(){
+  index = (index - 1 + slides.length) % slides.length;
+  showSlide(index);
+}
+function goSlide(i){
+  index = i;
+  showSlide(index);
+}
+setInterval(nextSlide, 4000);
+
+function open3D(){
+  document.getElementById("modelModal").style.display = "block";
+}
+
+function close3D(){
+  document.getElementById("modelModal").style.display = "none";
+}
+function openAR(){
+  document.getElementById("arModal").style.display = "flex";
+}
+
+function closeAR(){
+  document.getElementById("arModal").style.display = "none";
+
+}
+</script>
+<script>
+
+/* ===== SCROLL SHOW RELATED ===== */
+
+const related = document.querySelector('.related-section');
+
+window.addEventListener('scroll', () => {
+
+  const position = related.getBoundingClientRect().top;
+  const screen = window.innerHeight;
+
+  if(position < screen - 100){
+
+    related.classList.add('show');
+
+  }
+
+});
+
+</script>
+</body>
+
+</html>
+
+

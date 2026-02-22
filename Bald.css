@@ -1,0 +1,605 @@
+/* ===== PROFESSIONAL FONT IMPORT ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+
+/* ===== BODY ===== */
+
+body{
+
+  font-family:'DM Sans',sans-serif;
+
+  font-weight:400;
+
+  font-size:16px;
+
+  letter-spacing:.3px;
+
+  color:#1f2937;
+
+}
+
+
+/* ===== MAIN TITLE ===== */
+
+h1{
+
+  font-family:'Playfair Display',serif;
+
+  font-weight:700;
+
+  letter-spacing:1.2px;
+
+}
+
+
+/* ===== SUB TITLE ===== */
+
+h2,h3,.section-title{
+
+  font-family:'Playfair Display',serif;
+
+  font-weight:600;
+
+  letter-spacing:.5px;
+
+}
+
+
+/* ===== MENU ===== */
+
+.menu a{
+
+  font-family:'DM Sans',sans-serif;
+
+  font-weight:500;
+
+  letter-spacing:.5px;
+
+}
+
+
+/* ===== BUTTON ===== */
+
+.btn,
+.hero-btn{
+
+  font-family:'DM Sans',sans-serif;
+
+  font-weight:500;
+
+}
+
+
+/* ===== PRICE ===== */
+
+.price{
+
+  font-family:'DM Sans',sans-serif;
+
+  font-weight:700;
+
+  font-size:20px;
+
+  letter-spacing:.5px;
+
+}
+
+
+/* ===== DESCRIPTION ===== */
+
+p{
+
+  font-family:'DM Sans',sans-serif;
+
+  font-weight:400;
+
+  color:#6b7280;
+
+}
+:root{
+  --wood-dark:#2c1f1a;
+  --wood-main:#8b5a2b;
+  --wood-light:#f8f7f7;
+  --bg-light:#f9f7f4;
+  --text-dark:#1f2937;
+  --text-gray:#6b7280;
+
+  --shadow-lg:0 10px 30px rgba(0,0,0,.25);
+  --shadow-soft:0 6px 18px rgba(0,0,0,.15);
+}
+
+/* ===== Reset ===== */
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+/* ===== Page Layout ===== */
+html,body{
+  height:100%;
+}
+
+body{
+  font-family:'Prompt',sans-serif;
+  background:
+    linear-gradient(180deg,#faf8f5,var(--bg-light));
+  color:var(--text-dark);
+  line-height:1.7;
+  overflow-x:hidden;
+
+  display:flex;
+  flex-direction:column;
+}
+
+/* ===== Navbar ===== */
+nav{
+  background:
+    linear-gradient(
+      to right,
+      rgba(44,31,26,.98),
+      rgba(60,40,32,.95)
+    );
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0.8rem 2.5rem;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:var(--shadow-lg);
+  backdrop-filter:blur(6px);
+}
+
+nav .logo img{
+
+  height:55px;
+
+  border-radius:6px; /* ทำให้ขอบมน */
+
+  transition:transform .3s ease;
+
+}
+
+nav .logo img:hover{
+  transform:scale(1.05);
+}
+
+nav .menu{
+  display:flex;
+  align-items:center;
+}
+
+nav .menu a{
+  color:#fff;
+  margin:0 1.2rem;
+  text-decoration:none;
+  font-weight:600;
+  letter-spacing:.3px;
+  position:relative;
+  padding:6px 0;
+  transition:color .3s ease;
+}
+
+nav .menu a:hover{
+  color:#f5d9b5;
+}
+
+nav .menu a::after{
+  content:"";
+  position:absolute;
+  width:0%;
+  height:2px;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  background:linear-gradient(
+    to right,
+    transparent,
+    #f5d9b5,
+    transparent
+  );
+  transition:width .3s ease;
+}
+
+nav .menu a:hover::after,
+nav .menu a.active::after{
+  width:100%;
+}
+
+/* ===== Footer ===== */
+footer{
+  margin-top:auto;
+  background:
+    linear-gradient(
+      to right,
+      rgba(44,31,26,.98),
+      rgba(60,40,32,.95)
+    );
+  color:#fff;
+  padding:50px 20px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 -6px 20px rgba(0,0,0,.25);
+}
+
+footer::before{
+  content:"";
+  position:absolute;
+  inset:-50%;
+  background:
+    radial-gradient(circle,
+      rgba(255,255,255,0.12) 15%,
+      transparent 55%);
+  animation:rotateGlow 18s linear infinite;
+  pointer-events:none;
+}
+
+footer p{
+  font-size:.95rem;
+  letter-spacing:.4px;
+  color:#f3f3f3;
+}
+
+footer *{
+  position:relative;
+  z-index:1;
+}
+
+/* ===== Animation ===== */
+@keyframes rotateGlow{
+  from{transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
+}
+
+/* ===== Product Layout ===== */
+.product-page {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 50px;
+  padding: 60px 8%;
+  background: #fff;
+}
+
+/* ===== Gallery ===== */
+.gallery-wrapper {
+  width: 100%;
+}
+
+/* ===== รูปใหญ่ ===== */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: var(--shadow-lg);
+  background: #f3f3f3;
+}
+
+/* ⭐ แก้ตรงนี้: ไม่ตัดรูป */
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;        /* เห็นรูปครบ */
+  object-position: center;
+  background: #f3f3f3;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* ปุ่มเลื่อน */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  font-size: 22px;
+  padding: 10px 14px;
+  cursor: pointer;
+  z-index: 5;
+  border-radius: 50%;
+}
+
+.nav.prev { left: 15px; }
+.nav.next { right: 15px; }
+
+/* ปุ่ม 3D */
+.btn-3d {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: #111;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 6;
+}
+
+.btn-3d:hover {
+  background: #d4560d;
+}
+
+/* ===== รูปย่อย ===== */
+.thumbs {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.thumbs img {
+  width: 90px;
+  height: 70px;
+  object-fit: contain;     /* ⭐ ไม่ตัด */
+  object-position: center;
+  background: #f3f3f3;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: .3s;
+}
+
+.thumbs img:hover {
+  opacity: 1;
+  box-shadow: var(--shadow-lg);
+}
+
+/* ===== Detail ===== */
+.product-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-detail h1{
+  margin-top:0;
+}
+
+.price span {
+  color: #d4560d;
+  font-weight: 700;
+}
+
+.desc{
+  color:var(--text-gray);
+  line-height:1.7;
+}
+
+.spec{
+  padding-left:18px;
+}
+
+.spec li{
+  margin-bottom:6px;
+}
+
+/* ===== Buttons ===== */
+.btn-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border-radius: 35px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  font-size: 1rem;
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.25);
+}
+
+.btn.fb {
+  background: #1877f2;
+}
+
+.btn.call {
+  background: #d4560d;
+}
+
+/* ===== 3D Modal ===== */
+.model-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+.model-modal model-viewer {
+  width: 85%;
+  height: 85%;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+}
+
+.model-modal .close {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  font-size: 32px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+/* ===== Related Products ===== */
+.related-section{
+  padding:70px 8%;
+  background:#fff;
+  text-align:center;
+}
+
+.related-section h2{
+  font-size:30px;
+  margin-bottom:8px;
+}
+
+.related-section .sub{
+  color:var(--text-gray);
+  margin-bottom:40px;
+}
+
+.related-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+
+.related-card{
+  background:#fff;
+  border-radius:20px;
+  overflow:hidden;
+  text-decoration:none;
+  color:inherit;
+  box-shadow:var(--shadow-lg);
+  transition:.35s;
+}
+
+.related-card:hover{
+  transform:translateY(-10px);
+}
+
+/* ⭐ ไม่ตัดรูป */
+.related-card img{
+  width:100%;
+  height:180px;
+  object-fit:contain;
+  background:#f3f3f3;
+  padding:12px;
+}
+
+.related-card .info{
+  padding:18px;
+}
+
+.related-card h4{
+  font-size:16px;
+  margin-bottom:6px;
+}
+
+.related-card span{
+  font-weight:700;
+  color:#d4560d;
+}
+
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .product-page {
+    grid-template-columns: 1fr;
+  }
+  .slider {
+    height: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .btn-group {
+    flex-direction: column;
+  }
+}
+/* ===== IKEA Style Dimension ===== */ .hotspot { position: relative; background: #111; color: #fff; padding: 6px 14px; border-radius: 20px; font-family: 'Prompt', sans-serif; font-size: 13px; font-weight: 600; white-space: nowrap; pointer-events: none; box-shadow: 0 6px 15px rgba(0,0,0,0.35); } /* ลูกศรเล็กๆ */ .hotspot::after { content: ""; position: absolute; bottom: -4px; left: 50%; width: 8px; height: 8px; background: #111; transform: translateX(-50%) rotate(45deg); }
+.btn.ar{
+  background:#111;
+}
+.btn.ar:hover{
+  background:#2c1f1a;
+}
+.ar-modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.85);
+  z-index:9999;
+  justify-content:center;
+  align-items:center;
+}
+
+.ar-box{
+  background:#fff;
+  width:90%;
+  max-width:700px;
+  border-radius:20px;
+  padding:35px;
+  text-align:center;
+  box-shadow:var(--shadow-lg);
+}
+
+.ar-box h2{
+  margin-bottom:25px;
+}
+
+.ar-content{
+  display:flex;
+  gap:30px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.ar-item{
+  width:220px;
+}
+
+.ar-item img{
+  width:100%;
+  border-radius:16px;
+  background:#f3f3f3;
+  padding:10px;
+  box-shadow:var(--shadow-soft);
+}
+
+.ar-item p{
+  margin-top:10px;
+  font-size:14px;
+}
+
+.ar-howto{
+  margin-top:30px;
+  text-align:left;
+}
+
+.ar-howto h4{
+  margin-bottom:10px;
+}
+
+.ar-howto ol{
+  padding-left:20px;
+  color:var(--text-gray);
+}
+
+.ar-modal .close{
+  position:absolute;
+  top:25px;
+  right:30px;
+  font-size:32px;
+  color:#fff;
+  cursor:pointer;
+}

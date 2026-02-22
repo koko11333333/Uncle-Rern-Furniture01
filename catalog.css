@@ -1,0 +1,726 @@
+/* IMPORT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Sans+Thai:wght@300;400;500&display=swap');
+
+
+:root{
+  --wood-dark:#2c1f1a;
+  --wood-main:#8b5a2b;
+  --wood-light:#f8f7f7;
+  --bg-light:#f9f7f4;
+  --text-dark:#1f2937;
+  --text-gray:#6b7280;
+
+  --shadow-lg:0 10px 30px rgba(0,0,0,.25);
+  --shadow-soft:0 6px 18px rgba(0,0,0,.15);
+}
+
+/* ===== Reset ===== */
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+/* ===== Page Layout ===== */
+html,body{
+  height:100%;
+}
+
+body{
+  font-family:'Prompt',sans-serif;
+  background:
+    linear-gradient(180deg,#faf8f5,var(--bg-light));
+  color:var(--text-dark);
+  line-height:1.7;
+  overflow-x:hidden;
+
+  display:flex;
+  flex-direction:column;
+}
+
+/* ===== Navbar ===== */
+nav{
+  background:
+    linear-gradient(
+      to right,
+      rgba(44,31,26,.98),
+      rgba(60,40,32,.95)
+    );
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0.8rem 2.5rem;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:var(--shadow-lg);
+  backdrop-filter:blur(6px);
+}
+
+nav .logo img{
+  height:55px;
+  transition:transform .3s ease;
+}
+
+nav .logo img:hover{
+  transform:scale(1.05);
+}
+
+nav .menu{
+  display:flex;
+  align-items:center;
+}
+
+nav .menu a{
+  color:#fff;
+  margin:0 1.2rem;
+  text-decoration:none;
+  font-weight:600;
+  letter-spacing:.3px;
+  position:relative;
+  padding:6px 0;
+  transition:color .3s ease;
+}
+
+nav .menu a:hover{
+  color:#f5d9b5;
+}
+
+nav .menu a::after{
+  content:"";
+  position:absolute;
+  width:0%;
+  height:2px;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  background:linear-gradient(
+    to right,
+    transparent,
+    #f5d9b5,
+    transparent
+  );
+  transition:width .3s ease;
+}
+
+nav .menu a:hover::after,
+nav .menu a.active::after{
+  width:100%;
+}
+
+/* ===== Footer ===== */
+footer{
+  margin-top:auto;
+  background:
+    linear-gradient(
+      to right,
+      rgba(44,31,26,.98),
+      rgba(60,40,32,.95)
+    );
+  color:#fff;
+  padding:50px 20px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 -6px 20px rgba(0,0,0,.25);
+}
+
+footer::before{
+  content:"";
+  position:absolute;
+  inset:-50%;
+  background:
+    radial-gradient(circle,
+      rgba(255,255,255,0.12) 15%,
+      transparent 55%);
+  animation:rotateGlow 18s linear infinite;
+  pointer-events:none;
+}
+
+footer p{
+  font-size:.95rem;
+  letter-spacing:.4px;
+  color:#f3f3f3;
+}
+
+footer *{
+  position:relative;
+  z-index:1;
+}
+
+/* ===== Animation ===== */
+@keyframes rotateGlow{
+  from{transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
+}
+
+
+/* ===== TITLE FONT ===== */
+
+h1,h2,h3{
+
+font-family:'Playfair Display',serif;
+
+}
+
+
+
+/* ===== NAVBAR ===== */
+
+nav{
+
+  background:
+  linear-gradient(
+  to right,
+  rgba(44,31,26,.98),
+  rgba(60,40,32,.95)
+  );
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:14px 40px;
+
+  box-shadow:var(--shadow-soft);
+
+}
+
+
+nav .logo img{
+
+height:55px;
+
+border-radius:8px;
+
+transition:.3s;
+
+}
+
+
+nav .logo img:hover{
+
+transform:scale(1.05);
+
+}
+
+
+
+.menu a{
+
+color:#fff;
+
+text-decoration:none;
+
+margin:0 18px;
+
+font-weight:500;
+
+position:relative;
+
+}
+
+
+
+.menu a:hover{
+
+color:#f5d9b5;
+
+}
+
+
+
+
+/* ===== FOOTER ===== */
+
+footer{
+
+margin-top:auto;
+
+background:
+
+linear-gradient(
+to right,
+rgba(44,31,26,.98),
+rgba(60,40,32,.95)
+);
+
+color:#fff;
+
+padding:40px;
+
+text-align:center;
+
+}
+
+
+
+/* ========================= */
+
+/* ===== CATALOG SECTION ===== */
+
+/* ========================= */
+
+
+.catalog-section{
+
+padding:120px 20px;
+
+text-align:center;
+
+}
+
+
+
+/* ===== TITLE ===== */
+
+.catalog-title{
+
+font-size:44px;
+
+margin-bottom:10px;
+
+}
+
+
+
+.catalog-subtitle{
+
+color:#666;
+
+margin-bottom:70px;
+
+}
+
+
+
+
+/* ===== FIX สำคัญ: จัดเล่มให้อยู่กลาง ===== */
+
+
+.catalog-grid{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+
+
+
+/* ========================= */
+
+/* ===== BOOK ===== */
+
+/* ========================= */
+
+
+.catalog-book{
+
+width:400px;
+background:#fff;
+
+border-radius:22px;
+
+padding:28px;
+
+box-shadow:var(--shadow-lg);
+
+transition:.45s;
+
+position:relative;
+
+
+}
+
+/* ป้ายด้านบน */
+
+.catalog-book::before{
+
+content:"CATALOG";
+
+position:absolute;
+
+top:-13px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+background:var(--wood-main);
+
+color:#fff;
+
+font-size:12px;
+
+padding:5px 16px;
+
+border-radius:20px;
+
+letter-spacing:1px;
+
+}
+
+/* hover effect */
+
+.catalog-book:hover{
+
+transform:
+
+translateY(-15px)
+scale(1.03);
+
+box-shadow:
+
+0 40px 80px rgba(0,0,0,.25);
+
+}
+
+
+/* ========================= */
+
+/* ===== COVER ===== */
+
+/* ========================= */
+
+.book-cover{
+
+height:400px;
+
+border-radius:16px;
+
+overflow:hidden;
+
+position:relative;
+
+box-shadow:
+
+0 15px 35px rgba(0,0,0,.2);
+
+}
+
+
+
+.book-cover img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+transition:.6s;
+
+}
+
+
+
+.catalog-book:hover img{
+
+transform:scale(1.08);
+
+}
+
+
+
+
+/* เงาขอบหนังสือ */
+
+
+.book-cover::after{
+
+content:"";
+
+position:absolute;
+
+right:0;
+top:0;
+
+width:14px;
+height:100%;
+
+background:
+
+linear-gradient(
+to left,
+rgba(0,0,0,.35),
+transparent
+);
+
+}
+
+
+
+
+/* ========================= */
+
+/* ===== TEXT ===== */
+
+/* ========================= */
+
+
+.catalog-book h3{
+
+font-size:26px;
+
+margin-top:20px;
+
+}
+
+
+
+.catalog-book p{
+
+font-size:15px;
+
+color:#666;
+
+margin-bottom:22px;
+
+}
+
+
+
+
+/* ========================= */
+
+/* ===== BUTTON ===== */
+
+/* ========================= */
+
+
+.book-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+}
+
+
+
+.btn{
+
+padding:12px 24px;
+
+border-radius:30px;
+
+font-weight:500;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+
+
+.view{
+
+background:var(--wood-main);
+
+color:#fff;
+
+}
+
+
+
+.download{
+
+border:2px solid var(--wood-main);
+
+color:var(--wood-main);
+
+}
+
+
+
+.btn:hover{
+
+transform:scale(1.1);
+
+}
+
+/* ========================= */
+/* ===== SCROLL REVEAL PREMIUM ===== */
+/* ========================= */
+
+/* ซ่อนก่อน */
+.catalog-title,
+.catalog-subtitle,
+.catalog-book{
+
+opacity:0;
+
+transform:
+translateY(60px)
+scale(.95);
+
+filter:blur(10px);
+
+transition:
+opacity 1s ease,
+transform 1s ease,
+filter 1s ease;
+
+}
+
+
+/* ตอนโผล่ */
+
+.show{
+
+opacity:1;
+
+transform:
+translateY(0)
+scale(1);
+
+filter:blur(0);
+
+}
+
+
+/* delay */
+
+.catalog-subtitle.show{
+
+transition-delay:.3s;
+
+}
+
+.catalog-book.show{
+
+transition-delay:.6s;
+
+}
+
+body{
+
+  font-family:
+  'IBM Plex Sans Thai',
+  sans-serif;
+
+  font-weight:400;
+
+  font-size:16px;
+
+  letter-spacing:.2px;
+
+  color:#1f2937;
+
+}
+
+
+/* =========================
+MAIN TITLE
+========================= */
+
+h1{
+
+  font-family:
+  'Cormorant Garamond',
+  'IBM Plex Sans Thai',
+  serif;
+
+  font-weight:600;
+
+  letter-spacing:1.8px;
+
+}
+
+
+/* =========================
+SUB TITLE
+========================= */
+
+h2,
+h3,
+.section-title{
+
+  font-family:
+  'Cormorant Garamond',
+  'IBM Plex Sans Thai',
+  serif;
+
+  font-weight:500;
+
+  letter-spacing:1px;
+
+}
+
+
+/* =========================
+MENU
+========================= */
+
+.menu a{
+
+  font-family:
+  'Space Grotesk',
+  'IBM Plex Sans Thai',
+  sans-serif;
+
+  font-weight:500;
+
+  letter-spacing:.8px;
+
+}
+
+
+/* =========================
+BUTTON
+========================= */
+
+.btn,
+.hero-btn{
+
+  font-family:
+  'Space Grotesk',
+  'IBM Plex Sans Thai',
+  sans-serif;
+
+  font-weight:500;
+
+  letter-spacing:.5px;
+
+}
+
+
+/* =========================
+PRICE
+========================= */
+
+.price{
+
+  font-family:
+  'Space Grotesk',
+  sans-serif;
+
+  font-weight:600;
+
+  font-size:20px;
+
+  letter-spacing:1px;
+
+}
+
+
+/* =========================
+PARAGRAPH
+========================= */
+
+p{
+
+  font-family:
+  'IBM Plex Sans Thai',
+  sans-serif;
+
+  font-weight:400;
+
+  color:#6b7280;
+
+}

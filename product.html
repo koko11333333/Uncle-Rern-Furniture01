@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>สินค้า | ลุงเรินเฟอร์นิเจอร์</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="so.css">
+</head>
+
+<body>
+
+<!-- ===== Navbar ===== -->
+<nav>
+  <a href="index.html" class="logo">
+    <img src="img/logo.jpg" alt="ร้านลุงเริน">
+  </a>
+
+  <div class="menu">
+    <a href="index.html" >หน้าแรก</a>
+    <a href="product.html" class="active">สินค้า</a>
+    <a href="catalog.html">แคตตาล็อก</a>
+    <a href="about.html">เกี่ยวกับเรา</a>
+    <a href="contact.html">ติดต่อเรา</a>
+    <a href="ai.html">AI</a>
+</a>
+
+  </div>
+</nav>
+
+
+<!-- ===== Page Header ===== -->
+<header class="page-header">
+  <h1>สินค้าของเรา</h1>
+  <p>เฟอร์นิเจอร์ไม้ งานทำมือ แข็งแรง ใช้งานจริง</p>
+</header>
+
+<!-- ===== Main Layout ===== -->
+<main class="product-layout">
+
+  <!-- Filter -->
+  <aside class="filter-panel">
+    <h3>ตัวกรองสินค้า</h3>
+
+    <div class="filter-group">
+      <span>ประเภท</span>
+      <label><input type="checkbox" value="chair" checked> เก้าอี้</label>
+      <label><input type="checkbox" value="table" checked> โต๊ะ</label>
+      <label><input type="checkbox" value="shelf" checked> ชั้นวาง</label>
+    </div>
+
+    <div class="filter-group">
+      <span>ราคาไม่เกิน</span>
+      <label><input type="radio" name="price" value="500"> 500 บาท</label>
+      <label><input type="radio" name="price" value="1000"> 1,000 บาท</label>
+      <label><input type="radio" name="price" value="99999" checked> ทั้งหมด</label>
+    </div>
+  </aside>
+
+  <!-- Products -->
+  <section class="product-grid" id="productGrid">
+
+    <article class="product-card" data-type="chair" data-price="250">
+      <img src="img/g7.jpg">
+      <div class="info">
+        <h4>เก้าอี้ไม้</h4>
+        <p class="price">฿250</p>
+        <a href="g1.html" class="btn">ดูรายละเอียด</a>
+      </div>
+    </article>
+
+    <article class="product-card" data-type="table" data-price="500">
+      <img src="img/t1.jpg">
+      <div class="info">
+        <h4>โต๊ะไม้</h4>
+        <p class="price">฿500</p>
+        <a href="t4.html" class="btn">ดูรายละเอียด</a>
+      </div>
+    </article>
+
+    <article class="product-card" data-type="shelf" data-price="350">
+      <img src="img/cc1.png">
+      <div class="info">
+        <h4>ชั้นวางของไม้</h4>
+        <p class="price">฿350</p>
+        <a href="cc.html" class="btn">ดูรายละเอียด</a>
+      </div>
+    </article>
+    <article class="product-card" data-type="chair" data-price="120">
+      <img src="img/s0.jpg">
+      <div class="info">
+        <h4>เก้าอี้ซักผ้า</h4>
+        <p class="price">฿120</p>
+        <a href="s.html" class="btn">ดูรายละเอียด</a>
+      </div>
+    </article>
+
+    <article class="product-card" data-type="shelf" data-price="690">
+      <img src="img/ch1.png">
+      <div class="info">
+        <h4>ชั้นวางของไม้ (60*40*100)</h4>
+        <p class="price">฿690</p>
+        <a href="ch.html" class="btn">ดูรายละเอียด</a>
+      </div>
+    </article>
+
+     <article class="product-card" data-type="chair" data-price="890">
+      <img src="img/p1.jpg">
+      <div class="info">
+        <h4>เก้าอี้พนักพิง</h4>
+        <p class="price">฿890</p>
+        <a href="p.html" class="btn">ดูรายละเอียด</a>
+      </div>
+    </article>
+
+       <article class="product-card" data-type="chair" data-price="150">
+      <img src="img/l1.jpg">
+      <div class="info">
+        <h4>เก้าอี้หัวโล้น</h4>
+        <p class="price">฿150</p>
+        <a href="Bald.html" class="btn">ดูรายละเอียด</a>
+      </div>
+    </article>
+
+  </section>
+</main>
+
+
+<footer>
+  © 2025 ลุงเรินเฟอร์นิเจอร์
+</footer>
+
+<script>
+const typeChecks = document.querySelectorAll('input[type="checkbox"]');
+const priceRadios = document.querySelectorAll('input[name="price"]');
+const products = document.querySelectorAll('.product-card');
+
+function filterProducts(){
+
+  // ประเภทที่เลือก
+  const types = Array.from(typeChecks)
+    .filter(c => c.checked)
+    .map(c => c.value);
+
+  // แปลงเป็นตัวเลข
+  const maxPrice = parseInt(
+    document.querySelector('input[name="price"]:checked').value
+  );
+
+  products.forEach(p => {
+
+    const type = p.dataset.type;
+    const price = parseInt(p.dataset.price); // สำคัญมาก
+
+    if (types.includes(type) && price <= maxPrice) {
+      p.style.display = "block";
+    } else {
+      p.style.display = "none";
+    }
+
+  });
+}
+
+// เพิ่ม event
+typeChecks.forEach(el => el.addEventListener("change", filterProducts));
+priceRadios.forEach(el => el.addEventListener("change", filterProducts));
+
+// เรียกตอนโหลดหน้า
+filterProducts();
+</script>
+
+
+</body>
+</html>
